@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Павел Комаров](https://up.htmlacademy.ru/htmlcss/25/user/1069099).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
