@@ -88,5 +88,24 @@
       </ul>
       <a class="signature" href="https://htmlacademy.ru/intensive/htmlcss">Учебный проект HTML Academy</a>
     </footer>
+
+    <section class="modal modal-support">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="support-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="support-name-container">
+          <label for="support-name">Ваше имя:</label>
+          <input id="support-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+        </div>
+        <div class="support-email-container">
+          <label for="support-email">Ваш e-mail:</label>
+          <input id="support-email" type="email" name="email" value="" placeholder="email@example.com">
+        </div>
+        <div class="support-message-container">
+          <label for="support-message">Текст письма:</label>
+          <textarea id="support-message" name="message" value="" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
