@@ -51,7 +51,47 @@
 
       <section class="filter">
         <h2>Фильтр:</h2>
-        <!-- Место для формы, которую нужно пропустить по текущему заданию (Задание №3) -->
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="filter-input-checkbox" id="filter-black" type="checkbox" name="black" checked>
+                <label for="filter-black">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox" id="filter-white" type="checkbox" name="white">
+                <label for="filter-white">Белый</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox" id="filter-blue" type="checkbox" name="blue" checked>
+                <label for="filter-blue">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox" id="filter-red" type="checkbox" name="red" checked>
+                <label for="filter-red">Красный</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-checkbox" id="filter-pink" type="checkbox" name="pink">
+                <label for="filter-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="filter-input-radio" id="filter-blueetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+                <label for="filter-blueetooth-yes">Есть</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input-radio" id="filter-bluetooth-no" type="radio" name="bluetooth" value="no">
+                <label for="filter-bluetooth-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="catalog">
