@@ -10,7 +10,10 @@
         <a class="site-header-logo">
           <img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
         </a>
-        <span class="search">Поиск по сайту</span>
+        <form class="search-form" action="#" method="get">
+          <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+          <input class="search" id="search-field" type="search" name="q" placeholder="Поиск по сайту">
+        </form>
         <ul class="user-menu">
           <li class="login-link"><a href="#">Войти</a></li>
         </ul>
@@ -20,12 +23,21 @@
 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li class="catalog-navigation"><a href="#">Каталог товаров</a></li>
+          <li class="catalog"><a href="#">Каталог товаров</a></li>
           <li class="delivery"><a href="#">Доставка</a></li>
           <li class="warranty"><a href="#">Гарантия</a></li>
           <li class="contacts"><a href="#">Контакты</a></li>
         </ul>
       </nav>
+
+      <ul class="popup-categories">
+        <li><a href="#">Виртуальная реальность</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="#">Экшн-камеры</a></li>
+        <li><a href="#">Фитнес-браслеты</a></li>
+        <li><a href="#">Умные часы</a></li>
+        <li><a href="#">Квадрокоптеры</a></li>
+      </ul>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
