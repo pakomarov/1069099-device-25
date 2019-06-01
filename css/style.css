@@ -38,6 +38,8 @@
        url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
+/* Преобладающие текстовые стили страницы */
+
 body {
   margin: 0;
   padding: 0;
@@ -54,6 +56,31 @@ body {
 
 a {
   text-decoration: none;
+}
+
+/* Единый стиль кнопки */
+
+.button {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-align: center;
+  color: #000000;
+
+  background-color: transparent;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f0c52e;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #f0c52e;
 }
 
 /* Стили для шапки сайта */
@@ -134,6 +161,43 @@ a {
 
 .popup-categories {
   display: none;
+}
+
+/* Основное содержание главной страницы */
+
+.about-us h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.about-us p {
+  letter-spacing: normal;
+}
+
+.delivery-services {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: normal;
+  font-weight: 800;
+  color: #000000;
+}
+
+.contacts h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.contacts p {
+  letter-spacing: normal;
 }
 
 .modal {
