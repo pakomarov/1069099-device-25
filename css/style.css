@@ -37,3 +37,7 @@
        url("../fonts/gilroyextrabold.woff") format("woff"),
        url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
+
+.modal {
+  display: none;
+}
