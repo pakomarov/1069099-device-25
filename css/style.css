@@ -67,9 +67,12 @@ a {
   letter-spacing: 3.6px;
   font-weight: 800;
   text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
   color: #000000;
 
   background-color: transparent;
+  border: none;
 }
 
 .button:hover,
@@ -198,6 +201,106 @@ a {
 
 .contacts p {
   letter-spacing: normal;
+}
+
+/* Основное содержание страницы каталога */
+
+.inner-page h1 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumbs-current {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter {
+  background-color: #ebebeb;
+}
+
+.filter h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter-form fieldset {
+  border: none;
+}
+
+.filter-form legend {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter-form ul {
+  list-style: none;
+}
+
+.filter-option {
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+  color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #a6a6a6;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item a {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.catalog-item-image:hover img {
+  opacity: 0.7;
+}
+
+.catalog-item-price b{
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-weight: 300;
+  color: #464646;
 }
 
 /* Стили для подвала сайта */
