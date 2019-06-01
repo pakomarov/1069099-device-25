@@ -120,20 +120,20 @@ a {
   list-style: none;
 }
 
-.site-menu a {
+.site-header-site-menu a {
   color: #000000;
 }
 
-.site-menu a:hover,
-.site-menu a:focus {
+.site-header-site-menu a:hover,
+.site-header-site-menu a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.site-menu a:active {
+.site-header-site-menu a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-navigation {
+.site-navigation {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -146,16 +146,16 @@ a {
   list-style: none;
 }
 
-.site-navigation a{
+.site-header-site-navigation a{
   color: #000000;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-header-site-navigation a:hover,
+.site-header-site-navigation a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.site-navigation a:active {
+.site-header-site-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -199,6 +199,87 @@ a {
 .contacts p {
   letter-spacing: normal;
 }
+
+/* Стили для подвала сайта */
+
+.site-footer {
+  color: #ffffff;
+
+  background-color: #464646;
+}
+
+.site-footer-logo:hover,
+.site-footer-logo:focus {
+  opacity: 0.6;
+}
+
+.site-footer-logo:active {
+  opacity: 0.3;
+}
+
+.site-footer-site-menu a {
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer-site-menu a:hover,
+.site-footer-site-menu a:focus {
+  color: #ffffff;
+}
+
+.site-footer-site-menu a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-contacts {
+  letter-spacing: normal;
+}
+
+.site-footer-site-navigation a{
+  color: #ffffff;
+}
+
+.site-footer-site-navigation a:hover,
+.site-footer-site-navigation a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-footer-site-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social-media-list {
+  list-style: none;
+}
+
+.social-media-list a {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social-media-list a:hover,
+.social-media-list a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.social-media-list a:active {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.signature {
+  color: #ffc600;
+}
+
+.signature:hover,
+.signature:focus {
+  color: rgba(255, 198, 0, 0.6);
+}
+
+.signature:active {
+  color: rgba(255, 198, 0, 0.3);
+}
+
+
+/* Модальные окна */
 
 .modal {
   display: none;
