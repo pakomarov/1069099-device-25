@@ -56,6 +56,86 @@ a {
   text-decoration: none;
 }
 
+/* Стили для шапки сайта */
+
+.site-header {
+  color: #000000;
+
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.site-header-logo:hover,
+.site-header-logo:focus {
+  opacity: 0.6;
+}
+
+.site-header-logo:active {
+  opacity: 0.3;
+}
+
+.search {
+  font: inherit;
+
+  background-color: transparent;
+  border: none;
+}
+
+.search::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search:hover::placeholder,
+.search:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-menu {
+  list-style: none;
+}
+
+.site-menu a {
+  color: #000000;
+}
+
+.site-menu a:hover,
+.site-menu a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-navigation {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a{
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-categories {
+  display: none;
+}
+
 .modal {
   display: none;
 }
