@@ -38,6 +38,14 @@
        url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
+/* Вспомогательные классы для сетки */
+
+.layout-positioner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 /* Преобладающие текстовые стили страницы */
 
 body {
@@ -89,9 +97,26 @@ a {
 /* Стили для шапки сайта */
 
 .site-header {
+  position: relative;
+
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-right: 60px;
+  padding-bottom: 165px;
+  padding-left: 60px;
+
   color: #000000;
 
   background-color: rgba(240, 197, 46, 0.5);
+}
+
+.site-header-logo {
+  position: absolute;
+  top: -20px;
+
+  display: block;
+  width: 163px;
+  height: 35px;
 }
 
 .site-header-logo:hover,
@@ -101,6 +126,17 @@ a {
 
 .site-header-logo:active {
   opacity: 0.3;
+}
+
+.layout-header-top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.search-form {
+  width: 440px;
+  margin: 0;
 }
 
 .search {
@@ -119,7 +155,14 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.site-header-site-menu {
+  width: 560px;
+}
+
 .user-menu {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -137,16 +180,17 @@ a {
 }
 
 .site-navigation {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
   font-weight: 800;
   text-transform: uppercase;
-}
-
-.site-navigation {
-  list-style: none;
 }
 
 .site-header-site-navigation a{
