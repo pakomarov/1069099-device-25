@@ -118,6 +118,10 @@ a {
   background-color: rgba(240, 197, 46, 0.5);
 }
 
+.inner-page .layout-header {
+  padding-bottom: 50px;
+}
+
 .site-header-logo {
   position: absolute;
   top: -20px;
