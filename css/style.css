@@ -98,6 +98,7 @@ a {
 
 .site-header {
   position: relative;
+  margin-bottom: 40px;
 
   margin-top: 40px;
   padding-top: 50px;
@@ -212,7 +213,20 @@ a {
 
 /* Основное содержание главной страницы */
 
-.about-us h2 {
+.layout-index-columns {
+  display: flex;
+  justify-content: space-between;
+/* Паддинг у контейнера, а не маргин у футера, потому что на внутренней странице нет отступа между мэйном и футером. */
+  padding-bottom: 80px;
+}
+
+.about-us,
+.contacts {
+  width: 560px;
+}
+
+.about-us h2,
+.contacts h2 {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -221,7 +235,8 @@ a {
   color: #000000;
 }
 
-.about-us p {
+.about-us p,
+.contacts p {
   letter-spacing: normal;
 }
 
@@ -232,19 +247,6 @@ a {
   letter-spacing: normal;
   font-weight: 800;
   color: #000000;
-}
-
-.contacts h2 {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 47px;
-  line-height: 48px;
-  letter-spacing: 0.47px;
-  font-weight: 800;
-  color: #000000;
-}
-
-.contacts p {
-  letter-spacing: normal;
 }
 
 /* Основное содержание страницы каталога */
