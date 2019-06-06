@@ -46,6 +46,10 @@
   padding: 0 20px;
 }
 
+.layout-catalog-positioner {
+  padding-left: 60px;
+}
+
 /* Преобладающие текстовые стили страницы */
 
 body {
@@ -255,6 +259,10 @@ a {
 /* Основное содержание страницы каталога */
 
 .inner-page h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -264,6 +272,10 @@ a {
 }
 
 .breadcrumbs {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 45px;
+
   list-style: none;
 }
 
@@ -284,7 +296,14 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.layout-catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filter {
+  width: 268px;
+
   background-color: #ebebeb;
 }
 
@@ -327,7 +346,18 @@ a {
 }
 
 .catalog-list {
+  width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.catalog-item:not(:nth-child(2n)) {
+  margin-right: 40px;
+  margin-bottom: 40px;
 }
 
 .catalog-item a {
