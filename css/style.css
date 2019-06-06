@@ -38,6 +38,24 @@
        url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
+
+/* body > * {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+body > * > * {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+body > * > * > * {
+  background-color: rgba(0, 0, 255, 0.4);
+}
+
+body > * > * > * > * {
+  background-color: rgba(0, 255, 255, 0.4);
+} */
+
+
 /* Вспомогательные классы для сетки */
 
 .layout-positioner {
@@ -357,6 +375,15 @@ a {
   background-color: #464646;
 }
 
+.layout-footer-columns {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.layout-footer-left-column {
+  /* width: 325px; */
+}
+
 .site-footer-logo:hover,
 .site-footer-logo:focus {
   opacity: 0.6;
@@ -366,21 +393,8 @@ a {
   opacity: 0.3;
 }
 
-.site-footer-site-menu a {
-  line-height: 36px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.site-footer-site-menu a:hover,
-.site-footer-site-menu a:focus {
-  color: #ffffff;
-}
-
-.site-footer-site-menu a:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.footer-contacts {
+.address,
+.phone-number {
   letter-spacing: normal;
 }
 
@@ -414,6 +428,24 @@ a {
   color: rgba(255, 255, 255, 0.1);
 }
 
+.layout-footer-right-column {
+  /* width: 325px; */
+}
+
+.site-footer-site-menu a {
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer-site-menu a:hover,
+.site-footer-site-menu a:focus {
+  color: #ffffff;
+}
+
+.site-footer-site-menu a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .signature {
   color: #ffc600;
 }
@@ -426,7 +458,6 @@ a {
 .signature:active {
   color: rgba(255, 198, 0, 0.3);
 }
-
 
 /* Модальные окна */
 
