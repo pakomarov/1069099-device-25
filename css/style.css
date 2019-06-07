@@ -167,15 +167,28 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.site-menu {
+  display: flex;
+}
+
 .site-header-site-menu {
-  width: 560px;
+  width: 500px;
 }
 
 .user-menu {
+  display: flex;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.site-header-site-menu .user-menu {
+    margin-right: auto;
+}
+
+.site-header-site-menu .profile-name {
+  margin-right: 20px;
 }
 
 .site-header-site-menu a {
@@ -192,6 +205,7 @@ a {
 }
 
 .site-navigation {
+  display: flex;
   margin: 0;
   padding: 0;
 
@@ -203,6 +217,18 @@ a {
   letter-spacing: 3.6px;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.site-header-site-navigation .catalog-link {
+  margin-right: auto;
+}
+
+.site-header-site-navigation .delivery-link {
+  margin-right: 35px;
+}
+
+.site-header-site-navigation .warranty-link {
+  margin-right: 100px;
 }
 
 .site-header-site-navigation a{
@@ -396,10 +422,17 @@ a {
 
 .layout-footer-columns {
   display: flex;
+
+  padding-bottom: 65px;
+  padding-top: 65px;
 }
 
 .layout-footer-left-column {
   width: 325px;
+}
+
+.site-footer-logo {
+  margin-bottom: 40px;
 }
 
 .site-footer-logo:hover,
@@ -420,6 +453,24 @@ a {
   width: 440px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 65px;
+}
+
+.site-footer-site-navigation {
+  margin-bottom: 70px;
+}
+
+.site-footer-site-navigation .catalog-link {
+  margin-left: auto;
+  margin-right: 38px;;
+}
+
+.site-footer-site-navigation .delivery-link {
+  margin-right: 38px;
+}
+
+.site-footer-site-navigation .warranty-link {
+  margin-right: auto;
 }
 
 .site-footer-site-navigation a{
@@ -436,7 +487,23 @@ a {
 }
 
 .social-media-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.social-button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-button:first-child {
+  margin-left: auto;
+}
+
+.social-button:last-child {
+  margin-right: auto;
 }
 
 .social-media-list a {
@@ -453,7 +520,14 @@ a {
 }
 
 .layout-footer-right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   width: 325px;
+}
+
+.site-footer-site-menu {
+  margin-bottom: 30px;
 }
 
 .site-footer-site-menu a {
@@ -471,6 +545,8 @@ a {
 }
 
 .signature {
+  margin-top: auto;
+
   color: #ffc600;
 }
 
