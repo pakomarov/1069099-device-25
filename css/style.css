@@ -38,19 +38,7 @@
        url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
-/* Вспомогательные классы для сетки */
-
-.layout-positioner {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.layout-catalog-positioner {
-  padding-left: 60px;
-}
-
-/* Преобладающие текстовые стили страницы */
+/* Преобладающие стили страницы */
 
 body {
   margin: 0;
@@ -66,8 +54,45 @@ body {
   background-color: #ffffff;
 }
 
+/* Вспомогательные стили */
+
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Вспомогательные классы для сетки */
+
+.layout-positioner {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.layout-catalog-positioner {
+  padding-left: 60px;
 }
 
 /* Единый стиль кнопки */
