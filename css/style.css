@@ -122,7 +122,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  z-index: -10;
+  z-index: -1;
   top: 50%;
   left: 0;
 
@@ -659,11 +659,13 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+/* Хлебные крошки */
+
 .breadcrumbs {
   display: flex;
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
 
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
@@ -721,13 +723,16 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
+/* Фильтр каталога */
+
 .filter {
   width: 268px;
-
-  background-color: #ebebeb;
 }
 
 .filter h2 {
+  margin: 0;
+  padding: 23px 0;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -737,7 +742,15 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.filter-form {
+  margin: 0;
+  padding: 0;
+}
+
 .filter-form fieldset {
+  margin: 0;
+  padding: 0;
+
   border: none;
 }
 
@@ -765,6 +778,12 @@ input[type="radio"].visually-hidden {
   color: #a6a6a6;
 }
 
+.filter .button {
+  width: 200px;
+}
+
+/* Карточки товаров */
+
 .catalog-list {
   width: 760px;
   display: flex;
@@ -775,17 +794,61 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.catalog-item:not(:nth-child(2n)) {
+.catalog-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 360px;
+  margin-bottom: 46px;
+}
+
+.catalog-item h3 {
+  order: 1;
+  margin: 0;
+  padding: 0;
+  max-width: 260px;
+}
+
+.catalog-item:nth-child(2) h3 {
+  max-width: 200px;
+}
+
+.catalog-item-image {
+  order: 0;
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+}
+
+.catalog-item-price {
+  order: 2;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.catalog-item-price b {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item:nth-child(2n+1) {
   margin-right: 40px;
-  margin-bottom: 40px;
 }
 
 .catalog-item a {
+  display: block;
+  margin: 0;
+  padding: 0;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
   font-weight: 800;
+/* Попытка предотвратить нежелательный перенос строки */
+  hyphens: none;
   color: #000000;
 }
 
@@ -1017,7 +1080,7 @@ input[type="radio"].visually-hidden {
 
 
 
-/* body > * {
+body > * {
 
 }
 
@@ -1026,11 +1089,11 @@ body > * > * {
 }
 
 body > * > * > * {
-  background: rgba(0, 0, 255, 0.5);
+
 }
 
 body > * > * > * > * {
-  background: rgba(0, 255, 255, 0.5);
+
 }
 
 body > * > * > * > * > * {
@@ -1043,4 +1106,12 @@ body > * > * > * > * > * > * {
 
 body > * > * > * > * > * > * > * {
   background: rgba(0, 255, 0, 0.5);
-} */
+}
+
+body > * > * > * > * > * > * > * > * {
+  background: rgba(0, 0, 255, 0.5);
+}
+
+body > * > * > * > * > * > * > * > * > * {
+  background: rgba(0, 255, 255, 0.5);
+}
