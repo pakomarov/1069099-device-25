@@ -150,14 +150,24 @@ input[type="radio"].visually-hidden {
 
   padding-top: 34px;
   padding-right: 60px;
-  padding-bottom: 163px;
+  padding-bottom: 50px;
   padding-left: 59px;
 
   background-color: rgba(240, 197, 46, 0.5);
 }
 
-.inner-page .layout-header {
-  padding-bottom: 50px;
+.index-page .layout-header::after {
+  content: "";
+
+  position: absolute;
+  z-index: -10;
+  bottom: -113px;
+  left: 0;
+
+  width: 1160px;
+  height: 113px;
+
+  background-color: #f7e296;
 }
 
 .site-header-logo {
@@ -438,7 +448,7 @@ input[type="radio"].visually-hidden {
   width: 560px;
   margin: 0;
   padding: 0;
-  padding-top: 19px;
+  padding-top: 20px;
 
   list-style: none;
 }
@@ -451,7 +461,7 @@ input[type="radio"].visually-hidden {
   left: -59px;
 
   width: 1160px;
-  height: 148px;
+  height: 162px;
 
   background-color: #f7e296;
 }
@@ -463,31 +473,30 @@ input[type="radio"].visually-hidden {
 
 .catalog-subcategories a {
   display: block;
-  padding-left: 1px;
 
   vertical-align: middle;
   line-height: 36px;
 }
 
 .catalog-subcategories li:first-child a {
-  min-width: 238px;
+  min-width: 239px;
 }
 
 .catalog-subcategories li:nth-child(2) a {
-  min-width: 199px;
+  min-width: 200px;
 }
 
 .catalog-subcategories li:nth-child(4) a {
-  min-width: 238px;
+  min-width: 239px;
 }
 
 .catalog-subcategories li:nth-child(5) a {
-  min-width: 199px;
+  min-width: 200px;
   margin-right: 111px;
 }
 
 .catalog-subcategories li:nth-child(6) a {
-  min-width: 238px;
+  min-width: 239px;
 }
 
 .site-header-site-navigation .delivery-link {
@@ -498,6 +507,7 @@ input[type="radio"].visually-hidden {
   margin-right: 105px;
 }
 
+/* Шрифт не позволяет подогнать текст под правый край, поэтому подогнанно позиционированием */
 .site-header-site-navigation .contacts-link a {
   position: relative;
   left: 3px;
