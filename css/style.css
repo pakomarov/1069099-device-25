@@ -320,7 +320,7 @@ input[type="radio"].visually-hidden {
   width: 13px;
   height: 12px;
 
-  background-image: url("../img/login-link.svg");
+  background-image: url("../img/login-link-header.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -341,7 +341,7 @@ input[type="radio"].visually-hidden {
   width: 13px;
   height: 12px;
 
-  background-image: url("../img/login-link.svg");
+  background-image: url("../img/login-link-header.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -366,7 +366,7 @@ input[type="radio"].visually-hidden {
   width: 10px;
   height: 10px;
 
-  background-image: url("../img/compare.svg");
+  background-image: url("../img/compare-header.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -386,7 +386,7 @@ input[type="radio"].visually-hidden {
   width: 12px;
   height: 12px;
 
-  background-image: url("../img/cart.svg");
+  background-image: url("../img/cart-header.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -711,6 +711,22 @@ input[type="radio"].visually-hidden {
 
 .site-footer-site-menu a {
   color: #ffffff;
+}
+
+.site-footer .login-link a::before {
+  background-image: url("../img/login-link-footer.svg");
+}
+
+.site-footer .profile-name a::before {
+  background-image: url("../img/login-link-footer.svg");
+}
+
+.site-footer .compare::before {
+  background-image: url("../img/compare-footer.svg");
+}
+
+.site-footer .cart::before {
+  background-image: url("../img/cart-footer.svg");
 }
 
 .layout-footer-middle-row {
