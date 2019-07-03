@@ -649,7 +649,7 @@ input[type="radio"].visually-hidden {
 .inner-page h1 {
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
@@ -660,11 +660,43 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs {
+  display: flex;
   margin: 0;
   padding: 0;
   margin-bottom: 45px;
 
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  font-weight: 300;
+  color: #000000;
+
   list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+
+  padding-right: 37px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 19px;
+
+  width: 4px;
+  height: 7px;
+
+  transform: translateY(-50%);
+  background-image: url(../img/nav-arrow.svg);
+}
+
+.breadcrumbs li:nth-child(2)::after {
+  right: 16px;
 }
 
 .breadcrumbs a {
