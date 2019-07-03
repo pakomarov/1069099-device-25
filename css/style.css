@@ -98,6 +98,12 @@ input[type="radio"].visually-hidden {
 /* Единый стиль кнопки */
 
 .button {
+  position: relative;
+
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -110,6 +116,21 @@ input[type="radio"].visually-hidden {
 
   background-color: transparent;
   border: none;
+}
+
+.button::before {
+  content: "";
+
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+
+  transform: translateY(-50%);
+  background-color: #f0c52e;
 }
 
 .button:hover,
@@ -132,12 +153,19 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.site-header a {
+  color: #000000;
+}
+
 .site-header a:hover,
-.site-header a:focus {
+.site-footer a:hover,
+.site-header a:focus,
+.site-footer a:focus {
   opacity: 0.6;
 }
 
-.site-header a:active {
+.site-header a:active,
+.site-footer a:active {
   opacity: 0.3;
 }
 
@@ -174,7 +202,6 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: -17px;
 
-  display: block;
   width: 163px;
   height: 35px;
 }
@@ -289,10 +316,6 @@ input[type="radio"].visually-hidden {
   vertical-align: middle;
 }
 
-.site-header-site-menu a {
-  color: #000000;
-}
-
 .user-menu {
   display: flex;
   margin: 0;
@@ -325,10 +348,13 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
+.profile-name {
+  margin-right: 19px;
+}
+
 .profile-name a {
   position: relative;
   padding-left: 26px;
-  margin-right: 19px;
 }
 
 .profile-name a::before {
@@ -513,26 +539,44 @@ input[type="radio"].visually-hidden {
   left: 3px;
 }
 
-.site-header-site-navigation a{
-  color: #000000;
-}
-
 /* Основное содержание главной страницы */
+
+/* Секции "О нас" и "Контакты"*/
 
 .layout-index-columns {
   display: flex;
   justify-content: space-between;
-/* Паддинг у контейнера, а не маргин у футера, потому что на внутренней странице нет отступа между мэйном и футером. */
-  padding-bottom: 80px;
 }
 
 .about-us,
 .contacts {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
   width: 560px;
+  padding-top: 13px;
+  padding-bottom: 82px;
+}
+
+.about-us::before,
+.contacts::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
 }
 
 .about-us h2,
 .contacts h2 {
+  margin-bottom: 28px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -546,13 +590,58 @@ input[type="radio"].visually-hidden {
   letter-spacing: normal;
 }
 
+.about-us p {
+  width: 475px;
+  margin-bottom: 15px;
+}
+
+.about-us p:last-of-type {
+  margin-bottom: 66px;
+}
+
+.contacts p {
+  width: 515px;
+  margin-bottom: 39px;
+}
+
 .delivery-services {
+  margin: 0;
+  margin-bottom: 54px;
+  padding: 0;
+
+  list-style: none;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
   letter-spacing: normal;
   font-weight: 800;
   color: #000000;
+}
+
+.delivery-services li {
+  position: relative;
+  padding-left: 36px;
+}
+
+.delivery-services li:before {
+  content: "";
+
+  position: absolute;
+  left: 1px;
+  top: 16px;
+  opacity: 0.1;
+
+  width: 4px;
+  height: 4px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.about-us .button,
+.contacts .button {
+  width: 260px;
+  margin-top: auto;
 }
 
 /* Основное содержание страницы каталога */
@@ -689,28 +778,52 @@ input[type="radio"].visually-hidden {
   background-color: #464646;
 }
 
-.layout-footer-positioner {
-  padding-bottom: 65px;
-  padding-top: 65px;
+.site-footer a {
+  color: #ffffff;
+}
+
+.layout-footer {
+  padding-top: 54px;
+  padding-bottom: 68px;
 }
 
 .layout-footer-top-row {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.site-footer-logo:hover,
-.site-footer-logo:focus {
-  opacity: 0.6;
+.site-footer-logo {
+  padding-top: 12px;
 }
 
-.site-footer-logo:active {
-  opacity: 0.3;
+/* Меню в шапке */
+
+.site-footer-site-menu {
+  margin-left: auto;
+  justify-content: flex-end;
 }
 
+.site-footer-site-menu .user-menu {
+  margin-right: 44px;
+}
+
+/* Нюанс: переопределяет непрозрачность заданную для всех ссылок футера */
 .site-footer-site-menu a {
-  color: #ffffff;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Нюанс: переопределяет непрозрачность заданную для всех ссылок футера */
+.site-footer-site-menu a:hover,
+.site-footer-site-menu a:focus {
+  opacity: 1;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Нюанс: переопределяет непрозрачность заданную для всех ссылок футера */
+.site-footer-site-menu a:active {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .site-footer .login-link a::before {
@@ -729,9 +842,20 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/cart-footer.svg");
 }
 
+/* Нюанс: непрозрачность управляется отдельно у псевдоэлементов, чтобы не пересекаться с непрозрачностью текста */
+.site-footer-site-menu a:hover::before,
+.site-footer-site-menu a:focus::before {
+  opacity: 0.6;
+}
+
+/* Нюанс: непрозрачность управляется отдельно у псевдоэлементов, чтобы не пересекаться с непрозрачностью текста */
+.site-footer-site-menu a:active::before {
+  opacity: 0.3
+}
+
 .layout-footer-middle-row {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .footer-contacts {
@@ -744,6 +868,7 @@ input[type="radio"].visually-hidden {
 
 .address {
   order: -1;
+  margin-right: 118px;
 }
 
 .phone-number {
@@ -752,39 +877,38 @@ input[type="radio"].visually-hidden {
   text-align: right;
 }
 
-.site-footer-site-navigation {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.site-footer-site-navigation li:not(:last-child) {
-  margin-right: 38px;
+.site-footer-site-navigation li {
+  padding-top: 6px;
 }
 
 .site-footer-site-navigation li:first-child {
-  margin-left: auto;
+  margin-right: 34px;
 }
 
-.site-footer-site-navigation li:last-child {
+.site-footer-site-navigation li:nth-child(2) {
+  margin-right: 32px;
+}
+
+.site-footer-site-navigation {
   margin-right: auto;
 }
 
-.site-footer-site-navigation a{
-  color: #ffffff;
-}
-
-.site-footer-site-navigation a:hover,
-.site-footer-site-navigation a:focus {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.site-footer-site-navigation a:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
 .layout-footer-bottom-row {
+  position: relative;
   display: flex;
-  padding-left: 250px;
+}
+
+.layout-footer-bottom-row::before {
+  content: "";
+
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
 }
 
 .social-media-list {
@@ -797,45 +921,60 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.social-button:not(:last-child) {
-  margin-right: 20px;
+.social-button a {
+  opacity: 0.3;
+
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  overflow: hidden;
+  text-indent: -1000px;
 }
 
-.social-button:first-child {
-  margin-left: auto;
+.social-facebook {
+  margin-right: 23px;
 }
 
-.social-button:last-child {
-  margin-right: auto;
+.social-instagram {
+  margin-right: 22px;
 }
 
-.social-media-list a {
-  color: rgba(255, 255, 255, 0.3);
+.social-facebook a {
+  background-image: url("../img/facebook.svg");
 }
 
-.social-media-list a:hover,
-.social-media-list a:focus {
-  color: rgba(255, 255, 255, 0.6);
+.social-instagram a {
+  background-image: url("../img/instagram.svg");
 }
 
-.social-media-list a:active {
-  color: rgba(255, 255, 255, 0.1);
+.social-twitter a {
+  background-image: url("../img/twitter.svg");
+}
+
+.social-button a:hover,
+.social-button a:focus {
+  opacity: 0.6;
+}
+
+.social-button a:active {
+  opacity: 0.1;
 }
 
 .signature {
-  width: 250px;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
 
-  color: #ffc600;
-  text-align: right;
-}
+  display: block;
+  width: 27px;
+  height: 35px;
 
-.signature:hover,
-.signature:focus {
-  color: rgba(255, 198, 0, 0.6);
-}
+  overflow: hidden;
+  text-indent: -1000px;
 
-.signature:active {
-  color: rgba(255, 198, 0, 0.3);
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
 }
 
 /* Модальные окна */
@@ -844,12 +983,14 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+
+
 /* body > * {
 
 }
 
 body > * > * {
-  background: rgba(0, 255, 0, 0.5);
+
 }
 
 body > * > * > * {
@@ -866,4 +1007,8 @@ body > * > * > * > * > * {
 
 body > * > * > * > * > * > * {
   background: rgba(255, 0, 0, 0.5);
+}
+
+body > * > * > * > * > * > * > * {
+  background: rgba(0, 255, 0, 0.5);
 } */
