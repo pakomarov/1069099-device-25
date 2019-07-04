@@ -91,7 +91,7 @@ input[type="radio"].visually-hidden {
   padding: 0 20px;
 }
 
-.layout-catalog-positioner {
+.layout-catalog-main-positioner {
   padding-left: 60px;
 }
 
@@ -99,6 +99,8 @@ input[type="radio"].visually-hidden {
 
 .button {
   position: relative;
+/* Задаёт отдельный для кнопки контекст перекрывания */
+  z-index: 0;
 
   display: inline-block;
   padding-top: 8px;
@@ -541,12 +543,18 @@ input[type="radio"].visually-hidden {
 
 /* Основное содержание главной страницы */
 
-/* Секции "О нас" и "Контакты"*/
-
 .layout-index-columns {
   display: flex;
   justify-content: space-between;
 }
+
+.layout-index-columns .left-column,
+.layout-index-columns .right-column {
+  display: flex;
+  width: 560px;
+}
+
+/* Секции "О нас" и "Контакты"*/
 
 .about-us,
 .contacts {
@@ -554,9 +562,8 @@ input[type="radio"].visually-hidden {
 
   display: flex;
   flex-direction: column;
-  width: 560px;
   padding-top: 13px;
-  padding-bottom: 82px;
+  margin-bottom: 82px;
 }
 
 .about-us::before,
@@ -718,19 +725,52 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/* Сам каталог */
+
+.catalog-wrapper {
+  position: relative;
+}
+
+.catalog-wrapper::before,
+.catalog-wrapper::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  z-index: -10;
+
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.catalog-wrapper::before {
+  right: calc(50% + 252px);
+  height: 100%;
+}
+
+.catalog-wrapper::after {
+  height: 70px;
+}
+
 .layout-catalog-columns {
   display: flex;
   justify-content: space-between;
 }
 
-/* Фильтр каталога */
-
-.filter {
+.layout-catalog-columns .left-column {
   width: 268px;
 }
 
+.layout-catalog-columns .right-column {
+  width: 760px;
+}
+
+/* Фильтр каталога */
+
 .filter h2 {
   margin: 0;
+  margin-bottom: 221px;
   padding: 23px 0;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -782,62 +822,186 @@ input[type="radio"].visually-hidden {
   width: 200px;
 }
 
+/* Сортировка */
+
+.sorting {
+  height: 70px;
+  margin-bottom: 23px;
+}
+
 /* Карточки товаров */
 
-.catalog-list {
-  width: 760px;
+.product-cards-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
 
   list-style: none;
 }
 
-.catalog-item {
+.product-card {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   width: 360px;
-  margin-bottom: 46px;
+  margin-top: 46px;
 }
 
-.catalog-item h3 {
+.new-product {
+  position: relative;
+}
+
+.new-product::before {
+  content: "New";
+
+  position: absolute;
+  z-index: 10;
+  top: 29px;
+  right: 27px;
+
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  padding-top: 17px;
+  padding-left: 3px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: 800;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.product-card h3 {
   order: 1;
   margin: 0;
   padding: 0;
   max-width: 260px;
 }
 
-.catalog-item:nth-child(2) h3 {
+.product-card:nth-child(2) h3 {
   max-width: 200px;
 }
 
-.catalog-item-image {
+.product-image {
+  position: relative;
+/* Отдельный для карточки контекст перекрывания */
+  z-index: 0;
+
   order: 0;
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
 }
 
-.catalog-item-price {
+.button-product-card {
+  position: absolute;
+
+  display: none;
+}
+
+.button-add-to-cart  {
+  top: 50%;
+  left: 50%;
+
+  width: 200px;
+
+  transform: translateX(-50%) translateY(-50%) translateY(-5px);
+}
+
+.button-compare {
+  top: 50%;
+  left: 50%;
+  opacity: 0.5;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 36px;
+  letter-spacing: 0.13px;
+  font-weight: 300;
+  text-align: center;
+  color: #000000;
+  white-space: nowrap;
+
+  background-color: transparent;
+  border: none;
+  transform: translateX(-50%) translateY(20px);
+}
+
+.product-image:hover,
+.product-image:focus {
+  cursor: pointer;
+}
+
+.product-image:hover::before,
+.product-image:focus::before {
+  content: "";
+
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+
+  width: 360px;
+  height: 380px;
+
+  background-color: #eeeeee;
+}
+
+.product-image:hover .button-product-card,
+.product-image:focus .button-product-card {
+  display: block;
+}
+
+.button-product-card:hover,
+.button-product-card:focus,
+.button-product-card:active {
+  cursor: pointer;
+}
+
+.button-compare:hover,
+.button-compare:focus {
+  opacity: 1;
+}
+
+.button-compare:active {
+  opacity: 0.2;
+}
+
+.product-price {
   order: 2;
   margin: 0;
   padding: 0;
   margin-left: auto;
 }
 
-.catalog-item-price b {
+.product-price b {
   display: block;
   margin: 0;
   padding: 0;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-weight: 300;
+  color: #464646;
 }
 
-.catalog-item:nth-child(2n+1) {
+.product-card:nth-child(2n+1) {
   margin-right: 40px;
 }
 
-.catalog-item a {
+.product-card a {
   display: block;
   margin: 0;
   padding: 0;
@@ -850,19 +1014,6 @@ input[type="radio"].visually-hidden {
 /* Попытка предотвратить нежелательный перенос строки */
   hyphens: none;
   color: #000000;
-}
-
-.catalog-item-image:hover img {
-  opacity: 0.7;
-}
-
-.catalog-item-price b{
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.16px;
-  font-weight: 300;
-  color: #464646;
 }
 
 /* Стили для подвала сайта */
@@ -1080,7 +1231,7 @@ input[type="radio"].visually-hidden {
 
 
 
-body > * {
+/* body > * {
 
 }
 
@@ -1114,4 +1265,4 @@ body > * > * > * > * > * > * > * > * {
 
 body > * > * > * > * > * > * > * > * > * {
   background: rgba(0, 255, 255, 0.5);
-}
+} */
