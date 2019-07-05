@@ -981,6 +981,7 @@ input[type="text"].visually-hidden {
   background-image: url(../img/radio-on.svg);
 }
 
+/* Сделано по макету: выбранная радио-кнопка реагирует на нажатие как чекбокс */
 .filter-input-radio:not(:disabled):checked:active + label::before {
   background-image: url(../img/radio-off.svg);
 }
