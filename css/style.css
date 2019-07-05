@@ -219,8 +219,6 @@ input[type="radio"].visually-hidden {
 .search-form {
   position: relative;
 
-  display: flex;
-  width: 441px;
   margin: 0;
 }
 
@@ -240,8 +238,8 @@ input[type="radio"].visually-hidden {
 }
 
 .search-field {
-  flex-grow: 1;
-  padding: 8px 0 7px 39px;
+  width: 441px;
+  padding: 9px 85px 8px 39px;
 
   font: inherit;
   vertical-align: middle;
@@ -249,6 +247,7 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid transparent;
+  /* border-bottom: 2px solid #000000; */
 }
 
 .search-field:focus {
@@ -268,7 +267,11 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form-button {
+  position: absolute;
+  right: 0;
+  top: 0;
   opacity: 0;
+
   padding: 7px 19px 8px;
 
   font: inherit;
@@ -284,14 +287,13 @@ input[type="radio"].visually-hidden {
 
 .search-form-button:hover,
 .search-form-button:focus {
-  opacity: 1;
-
   color: #ffffff;
 
   background-color: #000000;
 }
 
 .search-form-button:active {
+  opacity: 1;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -533,7 +535,7 @@ input[type="radio"].visually-hidden {
 }
 
 /* Шрифт не позволяет подогнать текст под правый край, поэтому подогнанно позиционированием */
-.site-header-site-navigation .contacts-link a {
+.site-header-site-navigation .contacts-link {
   position: relative;
   left: 3px;
 }
@@ -885,7 +887,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input:not(:disabled):focus + label::before {
-  outline: rgb(59, 153, 252) auto 5px;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .filter-input-checkbox:not(:disabled):active + label::before {
@@ -999,7 +1001,7 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.button-add-to-cart  {
+.button-add-to-cart {
   top: 50%;
   left: 50%;
 
@@ -1091,7 +1093,7 @@ input[type="radio"].visually-hidden {
   margin-right: 40px;
 }
 
-.product-card a {
+.product-name {
   display: block;
   margin: 0;
   padding: 0;
