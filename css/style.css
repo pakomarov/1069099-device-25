@@ -554,6 +554,51 @@ input[type="text"].visually-hidden {
   width: 560px;
 }
 
+/* Секция Производители (брэнды) */
+
+.brands {
+  margin-bottom: 93px;
+}
+
+.brands-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.brands-list li:not(:last-child) {
+  margin-right: 40px;
+}
+
+
+.brands-list img {
+  opacity: 0;
+  display: block;
+}
+
+.brand-dji {
+  background-image: url(../img/brands-logo-dji-greyscale.png);
+}
+
+.brand-spgadgets {
+  background-image: url(../img/brands-logo-spgadgets-greyscale.png);
+}
+
+.brand-gopro {
+  background-image: url(../img/brands-logo-gopro-greyscale.png);
+}
+
+.brand-vive {
+  background-image: url(../img/brands-logo-vive-greyscale.png);
+}
+
+.brands-list img:hover,
+.brands-list img:focus {
+  opacity: 1;
+}
+
 /* Секции "О нас" и "Контакты"*/
 
 .about-us,
