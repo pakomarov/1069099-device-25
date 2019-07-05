@@ -1288,6 +1288,102 @@ input[type="text"].visually-hidden {
   color: #000000;
 }
 
+/* Пагинация */
+
+.paginator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 77px;
+
+  background-color: #ebebeb;
+}
+
+.paginator a {
+  display: block;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.previous-page,
+.next-page {
+  box-sizing: border-box;
+  width: 136px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+
+  background-color: transparent;
+}
+
+.previous-page {
+  padding-left: 30px;
+  text-align: left;
+}
+
+.next-page {
+  padding-right: 28px;
+  text-align: right;
+}
+
+.previous-page {
+  margin-right: 201px;
+}
+
+.previous-page:hover,
+.next-page:hover,
+.previous-page:focus,
+.next-page:focus {
+  background-color: #d9d9d9;
+}
+
+.previous-page:active,
+.next-page:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #d9d9d9;
+}
+
+.page-numbers {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.page-numbers a {
+  padding-top: 3px;
+  opacity: 0.3;
+}
+
+.current-page-number a {
+  opacity: 1;
+}
+
+.page-numbers a:hover,
+.page-numbers a:focus {
+  opacity: 0.6;
+}
+
+.page-numbers a:active {
+  opacity: 1;
+}
+
+.page-numbers li:not(:last-child) {
+  margin-right: 27px;
+}
+
+.next-page {
+  margin-left: auto;
+}
+
+
+
 /* Стили для подвала сайта */
 
 .site-footer {
@@ -1625,52 +1721,3 @@ input[type="text"].visually-hidden {
 .modal-map img {
   display: block;
 }
-
-
-/* body > * {
-
-}
-
-body > * > * {
-
-}
-
-body > * > * > * {
-
-}
-
-body > * > * > * > * {
-
-}
-
-body > * > * > * > * > * {
-
-}
-
-body > * > * > * > * > * > * {
-
-}
-
-body > * > * > * > * > * > * > * {
-
-}
-
-body > * > * > * > * > * > * > * > * {
-  background: rgba(0, 0, 255, 0.5);
-}
-
-body > * > * > * > * > * > * > * > * > * {
-  background: rgba(0, 255, 255, 0.5);
-}
-
-body > * > * > * > * > * > * > * > * > * > * {
-  background: rgba(255, 255, 0, 0.5);
-}
-
-body > * > * > * > * > * > * > * > * > * > * > * {
-  background: rgba(255, 0, 0, 0.5);
-}
-
-body > * > * > * > * > * > * > * > * > * > * > * > * {
-  background: rgba(0, 255, 0, 0.5);
-} */
