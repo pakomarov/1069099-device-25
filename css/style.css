@@ -2306,10 +2306,10 @@ input[type="text"].visually-hidden {
 .signature {
   position: absolute;
   bottom: -2px;
-  right: -2px;
+  right: 0;
 
   display: block;
-  width: 29px;
+  width: 27px;
   height: 35px;
 
   overflow: hidden;
