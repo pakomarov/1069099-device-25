@@ -897,21 +897,21 @@ input[type="text"].visually-hidden {
   opacity: 0.3;
 }
 
-/* Секция преимущества (слайдер) */
+/* Секция Сервисы (слайдер) */
 
-.features {
+.services {
   margin-bottom: 94px;
 
   background-image: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px, #e5e5e5 100%);
 }
 
-.features-container {
+.services-container {
   position: relative;
 
   display: flex;
 }
 
-.features-container::before {
+.services-container::before {
   content: "";
 
   position: absolute;
@@ -924,7 +924,7 @@ input[type="text"].visually-hidden {
   background-color: #000000;
 }
 
-.features-slider-controls {
+.services-slider-controls {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -933,19 +933,19 @@ input[type="text"].visually-hidden {
   padding-top: 82px;
 }
 
-.features-slider-controls button {
+.services-slider-controls button {
   width: 160px;
 }
 
-.features-slider-controls button:nth-child(1) {
+.services-slider-controls button:nth-child(1) {
   margin-bottom: 23px;
 }
 
-.features-slider-controls button:nth-child(2) {
+.services-slider-controls button:nth-child(2) {
   margin-bottom: 25px;
 }
 
-.features-slider-controls .button:active {
+.services-slider-controls .button:active {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -956,11 +956,11 @@ input[type="text"].visually-hidden {
   background-color: #000000;
 }
 
-.features-slider-controls .button:active::before {
+.services-slider-controls .button:active::before {
   opacity: 0;
 }
 
-.features-slider-controls .current-slide-button {
+.services-slider-controls .current-slide-button {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -971,11 +971,11 @@ input[type="text"].visually-hidden {
   background-color: #000000;
 }
 
-.features-slider-controls .current-slide-button::before {
+.services-slider-controls .current-slide-button::before {
   opacity: 0;
 }
 
-.features-slide-list {
+.services-slide-list {
   flex-grow: 1;
   margin: 0;
   padding: 0;
@@ -985,7 +985,7 @@ input[type="text"].visually-hidden {
   list-style: none;
 }
 
-.features-slide-list li {
+.services-slide-list li {
   position:relative;
 
   width: 100%;
@@ -993,17 +993,17 @@ input[type="text"].visually-hidden {
   display: none;
 }
 
-.features-slide-list .current-slide {
+.services-slide-list .current-slide {
   display: block;
 }
 
-.features-slide-list li::before {
+.services-slide-list li::before {
   content: "";
 
   position: absolute;
 }
 
-.features-slide-list h3 {
+.services-slide-list h3 {
   margin-bottom: 31px;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -1014,7 +1014,7 @@ input[type="text"].visually-hidden {
   color: #000000;
 }
 
-.features-slide-list p {
+.services-slide-list p {
   min-height: 221px;
 }
 
