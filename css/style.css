@@ -264,10 +264,6 @@ input[type="text"].visually-hidden {
   border-bottom: 2px solid transparent;
 }
 
-.search-field::-ms-clear {
-    display:none;
-}
-
 .search-field:focus {
   border-bottom-color: #000000;
 }
