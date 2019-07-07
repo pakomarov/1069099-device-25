@@ -1471,31 +1471,21 @@ input[type="text"].visually-hidden {
 .filter-form {
   margin: 0;
   padding: 0;
-
-  border-top: 1px solid transparent;
 }
 
 .filter-fieldset {
-  position: relative;
-
   margin: 0;
-  margin-top: 11px;
   padding: 0;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
 
   border: none;
 }
 
-.filter-fieldset::before {
-  content: "";
-
-  position: absolute;
-  top: -12px;
-
+.filter-fieldset legend {
   width: 201px;
-  height: 2px;
+  padding-top: 10px;
 
-  background-color: #000000;
+  border-top: 2px solid #000000;
 }
 
 .filter-form legend {
