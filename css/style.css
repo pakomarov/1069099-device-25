@@ -253,6 +253,7 @@ input[type="text"].visually-hidden {
 }
 
 .search-field {
+  box-sizing: border-box;
   width: 441px;
   height: 49px;
   padding: 0 85px 0 39px;
