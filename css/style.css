@@ -254,6 +254,7 @@ input[type="text"].visually-hidden {
 
 .search-field {
   width: 441px;
+  height: 49px;
   padding: 9px 85px 8px 39px;
 
   font: inherit;
