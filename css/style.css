@@ -1924,13 +1924,13 @@ input[type="text"].visually-hidden {
           transform: translateX(-50%) translateY(20px);
 }
 
-.product-image:hover,
-.product-image:focus {
+.product-card:hover,
+.product-card:focus {
   cursor: pointer;
 }
 
-.product-image:hover::before,
-.product-image:focus::before {
+.product-card:hover .product-image::before,
+.product-card:focus .product-image::before {
   content: "";
 
   position:absolute;
@@ -1944,8 +1944,8 @@ input[type="text"].visually-hidden {
   background-color: #eeeeee;
 }
 
-.product-image:hover .button-product-card,
-.product-image:focus .button-product-card {
+.product-card:hover .button-product-card,
+.product-card:focus .button-product-card {
   display: block;
 }
 
