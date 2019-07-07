@@ -326,6 +326,10 @@ input[type="text"].visually-hidden {
   color: #000000;
 }
 
+.search-field:active::placeholder {
+  display: none;
+}
+
 .search-form-button {
   position: absolute;
   right: 0;
