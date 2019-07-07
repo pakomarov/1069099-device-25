@@ -257,7 +257,11 @@ input[type="text"].visually-hidden {
   height: 49px;
   padding: 9px 85px 8px 39px;
 
-  font: inherit;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.15px;
+  font-weight: 300;
+  color: #000000;
   vertical-align: middle;
 
   background-color: transparent;
