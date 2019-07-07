@@ -2321,9 +2321,9 @@ input[type="text"].visually-hidden {
 
 /* Модальные окна */
 
-.modal {
+/* .modal {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
