@@ -80,7 +80,7 @@ input[type="text"].visually-hidden {
   white-space: nowrap;
 
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
