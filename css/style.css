@@ -1047,35 +1047,27 @@ input[type="text"].visually-hidden {
   margin-bottom: 25px;
 }
 
-.services-slider-controls .button:active {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  text-align: left;
-  color: #f7e184;
-
-  background-color: #000000;
-}
-
-.services-slider-controls .button:active::before {
-  opacity: 0;
-}
-
+.services-slider-controls .button:active,
 .services-slider-controls .current-slide-button {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  text-align: left;
   color: #f7e184;
+  background-color: transparent;
+}
+
+.services-slider-controls .button:active::before,
+.services-slider-controls .current-slide-button::before {
+  content: "";
+
+  position: absolute;
+  top: 19px;
+  left: 0;
+
+  width: 278px;
+  height: 40px;
 
   background-color: #000000;
 }
 
-.services-slider-controls .current-slide-button::before {
-  opacity: 0;
-}
+
 
 .services-slide-list {
   -webkit-box-flex: 1;
