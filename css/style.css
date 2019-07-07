@@ -310,18 +310,6 @@ input[type="text"].visually-hidden {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search-field:focus::-webkit-input-placeholder {
-  color: #000000;
-}
-
-.search-field:focus:-ms-input-placeholder {
-  color: #000000;
-}
-
-.search-field:focus::-ms-input-placeholder {
-  color: #000000;
-}
-
 .search-field:focus::placeholder {
   color: #000000;
 }
