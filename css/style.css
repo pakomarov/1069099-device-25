@@ -249,7 +249,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: contain;
 }
 
 .search-field {
@@ -396,7 +396,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/login-link-header.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: contain;
 }
 
 .profile-name {
@@ -420,7 +420,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/login-link-header.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: contain;
 }
 
 .logout-link {
@@ -445,7 +445,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/compare-header.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: contain;
 }
 
 .cart {
@@ -465,7 +465,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/cart-header.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: contain;
 }
 
 /* Навигация в шапке */
@@ -516,7 +516,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: contain;
 }
 
 .catalog-subcategories {
@@ -902,6 +902,9 @@ input[type="text"].visually-hidden {
   content: "";
 
   position: absolute;
+
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .virtual-reality a::before {
@@ -1065,8 +1068,6 @@ input[type="text"].visually-hidden {
   background-color: #000000;
 }
 
-
-
 .services-slide-list {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1120,6 +1121,8 @@ input[type="text"].visually-hidden {
   height: 164px;
 
   background-image: url(../img/delivery.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .slide-delivery p {
@@ -1148,6 +1151,8 @@ input[type="text"].visually-hidden {
   height: 186px;
 
   background-image: url(../img/credit.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .slide-credit p {
@@ -1178,6 +1183,11 @@ input[type="text"].visually-hidden {
 .brands-list img {
   opacity: 0;
   display: block;
+}
+
+.brands-list li {
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .brand-dji {
@@ -1370,6 +1380,8 @@ input[type="text"].visually-hidden {
 
           transform: translateY(-50%);
   background-image: url(../img/nav-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .breadcrumbs li:nth-child(2)::after {
@@ -1583,6 +1595,9 @@ input[type="text"].visually-hidden {
   content: "";
 
   position: absolute;
+
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .filter-input-checkbox + label::before {
@@ -1753,12 +1768,16 @@ input[type="text"].visually-hidden {
   left: 0;
 
   background-image: url(../img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .sorting-direction::after {
   right: 0;
 
   background-image: url(../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .sorting-direction:hover::before,
@@ -1976,10 +1995,6 @@ input[type="text"].visually-hidden {
   line-height: 24px;
   letter-spacing: 0.18px;
   font-weight: 800;
-/* Попытка предотвратить нежелательный перенос строки */
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
   color: #000000;
 }
 
@@ -2083,8 +2098,6 @@ input[type="text"].visually-hidden {
 .next-page {
   margin-left: auto;
 }
-
-
 
 /* Стили для подвала сайта */
 
@@ -2260,6 +2273,9 @@ input[type="text"].visually-hidden {
 
   overflow: hidden;
   text-indent: -1000px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .social-facebook {
@@ -2305,6 +2321,7 @@ input[type="text"].visually-hidden {
 
   background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Модальные окна */
@@ -2342,6 +2359,8 @@ input[type="text"].visually-hidden {
   border: none;
 
   background-image: url(../img/modal-close.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .modal-close:hover,
