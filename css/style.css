@@ -881,13 +881,16 @@ input[type="text"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
+  margin-left: -40px;
   padding: 0;
 
   list-style: none;
+}
+
+.types-of-devices-list li {
+  margin-left: 40px;
 }
 
 .types-of-devices-list a {
@@ -1182,14 +1185,16 @@ input[type="text"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  margin-left: -40px;
   padding: 0;
 
   list-style: none;
 }
 
-.brands-list li:not(:last-child) {
-  margin-right: 40px;
+.brands-list li {
+  margin-left: 40px;
 }
 
 
