@@ -833,33 +833,33 @@ input[type="text"].visually-hidden {
   color: #000000;
 }
 
+.product-description-table th:nth-child(1),
+.product-description-table td:nth-child(1) {
+  width: 159px;
+}
+
+.product-description-table th:nth-child(2),
+.product-description-table td:nth-child(2) {
+  width: 139px;
+}
+
 .slide-selfie .slider-product-image {
   padding-left: 90px;
 }
 
-.slide-selfie .slider-product-description .details {
+.slide-selfie .details {
   width: 485px;
-}
-
-.slide-selfie .product-description-table th:nth-child(1),
-.slide-selfie .product-description-table td:nth-child(1) {
-  width: 159px;
-}
-
-.slide-selfie .product-description-table th:nth-child(2),
-.slide-selfie .product-description-table td:nth-child(2) {
-  width: 139px;
 }
 
 .slide-fitness .slider-product-image {
   padding-left: 103px;
 }
 
-.slide-fitness .slider-product-description .slogan {
+.slide-fitness .slogan {
   max-width: 350px;
 }
 
-.slide-fitness .slider-product-description .details {
+.slide-fitness .details {
   width: 445px;
 }
 
@@ -867,7 +867,7 @@ input[type="text"].visually-hidden {
   padding-left: 60px;
 }
 
-.slide-drone .slider-product-description .details {
+.slide-drone .details {
   width: 455px;
 }
 
