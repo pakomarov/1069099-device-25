@@ -2438,6 +2438,8 @@ input[type="text"].visually-hidden {
 
   background-color: #f2f2f2;
   border: 3px solid #f2f2f2;
+
+  outline: none;
 }
 
 .support-form input::-webkit-input-placeholder,
